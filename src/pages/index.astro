@@ -1,0 +1,69 @@
+---
+import Base from '../layouts/Base.astro';
+import AppCard from '../components/AppCard.astro';
+import ContactForm from '../components/ContactForm.astro';
+import { apps } from '../data/apps';
+import { site } from '../data/site';
+---
+<Base>
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">Mobile app studio</p>
+      <h1>We design and build <em>mobile apps</em> people love.</h1>
+      <p class="lead">
+        {site.legalName} turns ideas into polished iOS and Android apps, from first sketch to App Store launch.
+      </p>
+      <div class="actions">
+        <a class="btn" href="#contact">Get in touch</a>
+        <a class="btn ghost" href="#apps">See our apps</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="what-we-do">
+    <div class="container">
+      <p class="eyebrow">What we do</p>
+      <h2>From idea to the App Store.</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Design</h3>
+          <p>Clear, friendly interfaces shaped around how people actually use their phones.</p>
+        </div>
+        <div class="card">
+          <h3>Build</h3>
+          <p>Fast, reliable apps for iOS and Android, built to be maintained and grown.</p>
+        </div>
+        <div class="card">
+          <h3>Launch</h3>
+          <p>Store listings, release management and the polish needed to ship with confidence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="apps">
+    <div class="container">
+      <p class="eyebrow">Our apps</p>
+      <h2>Things we are making.</h2>
+      <div class="grid">
+        {apps.length > 0
+          ? apps.map((app) => <AppCard app={app} />)
+          : (
+            <div class="card placeholder">
+              <h3>Our first apps are on the way</h3>
+              <p>We are hard at work. Check back soon, or get in touch to hear about launches first.</p>
+            </div>
+          )}
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="contact">
+    <div class="container">
+      <p class="eyebrow">Contact</p>
+      <h2>Let us talk.</h2>
+      <p class="lead">Questions, ideas or press? Send a message and we will reply as soon as we can.</p>
+      <ContactForm />
+    </div>
+  </section>
+</Base>

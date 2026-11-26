@@ -1,0 +1,46 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../data/site';
+---
+<Base title="Privacy Policy" description={`How ${site.legalName} handles personal information.`}>
+  <section class="section">
+    <div class="container prose">
+      <h1>Privacy Policy</h1>
+      <p><em>Last updated: {site.updated}</em></p>
+      <p class="notice">
+        Template text. Please review it (ideally with legal counsel) and update it to match your actual
+        practices, and add app-specific policies as you publish apps.
+      </p>
+
+      <h2>Who we are</h2>
+      <p>{site.legalName} ("we", "us") operates this website and publishes mobile apps.</p>
+
+      <h2>Information we collect</h2>
+      <p>
+        On this website we only collect information you choose to send us through the contact form
+        (your name, email address and message). We do not use advertising trackers.
+      </p>
+
+      <h2>How we use it</h2>
+      <p>We use your details solely to reply to your message. We do not sell your personal information.</p>
+
+      <h2>Service providers</h2>
+      <p>
+        Contact form submissions are processed by Formspree and delivered to us by email. The site is
+        hosted on Cloudflare, which may process technical data such as IP addresses to deliver the site.
+      </p>
+
+      <h2>Your choices</h2>
+      <p>
+        You can ask us to access or delete the information you sent us by emailing
+        <a href={`mailto:${site.email}`}>{site.email}</a>.
+      </p>
+
+      <h2>Children</h2>
+      <p>This website is not directed to children under 13.</p>
+
+      <h2>Contact</h2>
+      <p><a href={`mailto:${site.email}`}>{site.email}</a></p>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,21 @@
+---
+import Base from '../layouts/Base.astro';
+import ContactForm from '../components/ContactForm.astro';
+import { site } from '../data/site';
+---
+<Base title="Support" description={`Get help with ${site.name} apps.`}>
+  <section class="section">
+    <div class="container prose">
+      <h1>Support</h1>
+      <p class="lead">Need help with one of our apps? We are happy to help.</p>
+      <p>
+        Email us at <a href={`mailto:${site.email}`}>{site.email}</a> or use the form below. Please
+        include the app name, your device and OS version, and a description of the problem.
+      </p>
+      <h2>Frequently asked questions</h2>
+      <p><strong>How do I request deletion of my data?</strong><br />Email us and we will process your request.</p>
+      <p><strong>How do I report a bug?</strong><br />Send us the details above, including screenshots if possible.</p>
+      <ContactForm />
+    </div>
+  </section>
+</Base>

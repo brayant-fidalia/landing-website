@@ -1,0 +1,13 @@
+---
+import type { App } from '../data/apps';
+const { app } = Astro.props as { app: App };
+---
+<article class="card app-card">
+  {app.icon && <img src={app.icon} alt="" width="72" height="72" />}
+  <h3>{app.name}</h3>
+  <p>{app.description}</p>
+  <div class="links">
+    {app.appStoreUrl && <a href={app.appStoreUrl} rel="noopener">App Store</a>}
+    {app.playStoreUrl && <a href={app.playStoreUrl} rel="noopener">Google Play</a>}
+  </div>
+</article>
