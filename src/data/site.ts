@@ -2,7 +2,7 @@
 export const site = {
   name: 'Fidalia Labs',
   legalName: 'Fidalia Labs LLC',
-  email: 'info@fidalialabs.com', // TODO: confirm real address
+  email: 'info@fidalialabs.com', 
   tagline: 'We design and build mobile apps people love.',
   description:
     'Fidalia Labs LLC is a mobile app studio. We design, build, and launch thoughtful iOS and Android apps.',
